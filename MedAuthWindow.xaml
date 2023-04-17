@@ -1,0 +1,23 @@
+﻿<Window x:Class="A5V.MedAuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A5V"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="вход" Height="600" Width="1000">
+    <Grid Background="#1e2124">
+        <Border MinWidth="400" CornerRadius="20"  MaxWidth="550" Margin="15,0,15,0" Background="#282b30" VerticalAlignment="Center" Padding="15" Height="220">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="#36393e" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" Height="42" Text="Введите логин и пароль" Foreground="White"/>
+                <TextBox x:Name="MedLoginTextBox"  Foreground="White" materialDesign:HintAssist.Hint="введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <TextBox x:Name="MedPasswordTextBox"  Foreground="White" materialDesign:HintAssist.Hint="введите пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="MedEnterButton" HorizontalAlignment="Center" Content="Войти" Margin="10" Click="MedEnterButton_Click"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

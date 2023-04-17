@@ -1,0 +1,77 @@
+﻿<Page x:Class="A5V.Pages.Medkomissiya_P"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:A5V.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1920"
+      IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid Background="#1e2124">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="631*"/>
+            <ColumnDefinition Width="169*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid Grid.Row="1" Margin="10,10,10,10" Name="DataGridMedkomissiya" AutoGenerateColumns="False" IsReadOnly="True" Background="#36393e" Grid.ColumnSpan="2">
+            <DataGrid.Columns>
+
+                <DataGridTextColumn Width="*" Foreground = "#fffeff" Binding="{Binding Id}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="Id" FontSize="15" Foreground="White" Style="{StaticResource MaterialDesignHeadline6TextBlock}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="*" Foreground = "#fffeff" Binding="{Binding Height}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="Height" FontSize="15" Foreground="White" Style="{StaticResource MaterialDesignHeadline6TextBlock}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="*" Foreground = "#fffeff" Binding="{Binding Weight}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="Weight" FontSize="15" Foreground="White" Style="{StaticResource MaterialDesignHeadline6TextBlock}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="*" Foreground = "#fffeff" Binding="{Binding BloodType}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="BloodType" FontSize="15" Foreground="White" Style="{StaticResource MaterialDesignHeadline6TextBlock}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="*" Foreground = "#fffeff" Binding="{Binding VisionLeft}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="VisionLeft" FontSize="15" Foreground="White" Style="{StaticResource MaterialDesignHeadline6TextBlock}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="*" Foreground = "#fffeff" Binding="{Binding VisionRight}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="VisionRight" FontSize="15" Foreground="White" Style="{StaticResource MaterialDesignHeadline6TextBlock}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="*" Foreground = "#fffeff" Binding="{Binding HearingLeft}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="HearingLeft" FontSize="15" Foreground="White" Style="{StaticResource MaterialDesignHeadline6TextBlock}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+                <DataGridTextColumn Width="*" Foreground = "#fffeff" Binding="{Binding HearingRight}">
+                    <DataGridTextColumn.Header>
+                        <TextBlock Text="HearingRight" FontSize="15" Foreground="White" Style="{StaticResource MaterialDesignHeadline6TextBlock}"/>
+                    </DataGridTextColumn.Header>
+                </DataGridTextColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <UniformGrid Grid.Row="2" Columns="3" Grid.ColumnSpan="2">
+
+            <Button Name="Удаление" Padding="1" Margin="5" Content="Удаление" FontSize="20" Click="Button_Click"  Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
+            <Button Name="Добавление" Padding="1" Margin="5" Content="Добавление" FontSize="20" Click="Add_Show_Click"  Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
+            <Button Name="Редактирование" Padding="1" Margin="5" Content="Редактирование" FontSize="20" Click="Button_Click_1"  Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
+        </UniformGrid>
+
+    </Grid>
+</Page>
