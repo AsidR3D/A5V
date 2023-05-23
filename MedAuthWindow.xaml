@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:A5V"
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        Height="1080" Width="1920" WindowStartupLocation="CenterScreen">
+        Height="1080" Width="1919" WindowStartupLocation="CenterScreen">
     <Grid Background="#1e2124">
         <Border MinWidth="400" CornerRadius="20"  MaxWidth="550" Margin="15,0,15,0" Background="#282b30" VerticalAlignment="Center" Padding="15" Height="220">
             <Border.Effect>
