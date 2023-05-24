@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:A5V"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-             Title="Window_Menu" Height="450" Width="800">
+        Title="Window_Menu" materialDesign:ButtonAssist.CornerRadius="5" WindowState="Maximized" d:DesignWidth="717.333" d:DesignHeight="511.06" >
     <Grid Background="#1e2124">
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
@@ -20,9 +20,9 @@
             </Grid.ColumnDefinitions>
 
             <StackPanel Margin="5">
-                <Button Content="Сотрудники" Click ="Show_Rabotnik" FontSize="15" HorizontalAlignment="Center" Margin="10" Width="500" />
-                <Button Content="Призывники" Click ="Show_Priizvnik" FontSize="15" HorizontalAlignment="Center" Margin="10" Width="500"/>
-                <Button Content="Медкомиссия" Click ="Show_Medkomissiya" FontSize="15" HorizontalAlignment="Center" Margin="10" Width="500"/>
+                <Button Content="Сотрудники" Click ="Show_Rabotnik" FontSize="15" HorizontalAlignment="Center" Margin="10" Width="500" Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
+                <Button Content="Призывники" Click ="Show_Priizvnik" FontSize="15" HorizontalAlignment="Center" Margin="10" Width="500" Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
+                <Button Content="Медкомиссия" Click ="Show_Medkomissiya" FontSize="15" HorizontalAlignment="Center" Margin="10" Width="500" Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
             </StackPanel>
             <Frame Name ="FrameNav" Grid.Column="1"/>
         </Grid>

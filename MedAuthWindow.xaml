@@ -12,12 +12,20 @@
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="#36393e" ShadowDepth="0"/>
             </Border.Effect>
-            <StackPanel>
-                <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" Height="42" Text="Введите логин и пароль" Foreground="White"/>
-                <TextBox x:Name="MedLoginTextBox"  Foreground="White" materialDesign:HintAssist.Hint="введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <TextBox x:Name="MedPasswordTextBox"  Foreground="White" materialDesign:HintAssist.Hint="введите пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                <Button x:Name="MedEnterButton" HorizontalAlignment="Center" Content="Войти" Margin="10" Click="MedEnterButton_Click"/>
-            </StackPanel>
-        </Border>
+            <Grid>
+              <Grid.RowDefinitions>
+                <RowDefinition>
+                    <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" Height="42" Text="Введите логин и пароль" Foreground="White"/>
+                </RowDefinition>
+                <RowDeinition>
+                    <materialDesign:PackIcon Kind="Account" />
+                    <TextBox x:Name="MedLoginTextBox" HorizontalContentAlignment="Center" Foreground="White" materialDesign:HintAssist.Hint="введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                    <materialDesign:PackIcon Kind="AccountKey" />
+                    <TextBox x:Name="MedPasswordTextBox" HorizontalContentAlignment="Center" Foreground="White" materialDesign:HintAssist.Hint="введите пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                </RowDeinition>
+                <Button x:Name="MedEnterButton"  HorizontalAlignment="Center" Content="Войти" Margin="10" Click="MedEnterButton_Click" Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
+              </Grid.RowDefinitions>
+            </Grid>
+    </Border>
     </Grid>
 </Window>
