@@ -7,25 +7,27 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Height="1080" Width="1920" WindowStartupLocation="CenterScreen">
-    <Grid Background="#1e2124">
-        <Border MinWidth="400" CornerRadius="20"  MaxWidth="550" Margin="15,0,15,0" Background="#282b30" VerticalAlignment="Center" Padding="15" Height="220">
+    <Grid Background="#1e2124" RenderTransformOrigin="0.428,0.45">
+        <Border MinWidth="400" CornerRadius="20"  MaxWidth="550" Margin="15,0,15,0" Background="#282b30" VerticalAlignment="Center" Padding="15" Height="320">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="30" Color="#36393e" ShadowDepth="0"/>
             </Border.Effect>
             <Grid>
-              <Grid.RowDefinitions>
-                <RowDefinition>
-                    <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" Height="42" Text="Введите логин и пароль" Foreground="White"/>
-                </RowDefinition>
-                <RowDeinition>
-                    <materialDesign:PackIcon Kind="Account" />
-                    <TextBox x:Name="MedLoginTextBox" HorizontalContentAlignment="Center" Foreground="White" materialDesign:HintAssist.Hint="введите логин" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                    <materialDesign:PackIcon Kind="AccountKey" />
-                    <TextBox x:Name="MedPasswordTextBox" HorizontalContentAlignment="Center" Foreground="White" materialDesign:HintAssist.Hint="введите пароль" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
-                </RowDeinition>
-                <Button x:Name="MedEnterButton"  HorizontalAlignment="Center" Content="Войти" Margin="10" Click="MedEnterButton_Click" Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
-              </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Margin="0 0 0 20" Height="42" Text="Введите логин и пароль"  Grid.Row="0" Foreground="White"/>
+                <materialDesign:PackIcon Kind="Account" Grid.Row="1" Height="36" Width="36" Margin="5 7 0 0"/>
+                <TextBox x:Name="MedLoginTextBox" FontSize="15" VerticalAlignment="Top" HorizontalContentAlignment="Center" Foreground="White" materialDesign:HintAssist.Hint="введите логин" Grid.Row="1" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <materialDesign:PackIcon Kind="AccountKey" VerticalAlignment="Bottom" Grid.Row="1" Height="36" Width="36" />
+                <TextBox x:Name="MedPasswordTextBox" FontSize="15" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Foreground="White" materialDesign:HintAssist.Hint="введите пароль" Grid.Row="1" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+                <Button x:Name="MedEnterButton"  HorizontalAlignment="Center" Content="Войти" Margin="10" Grid.Row="2" Click="MedEnterButton_Click" Style="{StaticResource MaterialDesignFlatDarkBgButton}"/>
             </Grid>
-    </Border>
+        </Border>
     </Grid>
 </Window>
